@@ -1,0 +1,26 @@
+<div class="row justify-content-center">
+    <div class="col-md-6">
+
+        <h1>Inicio de sesión</h1>
+
+        <form action="/login" method="POST">
+            <div class="form-group">
+                <label for="field1">Nombre de usuario</label>
+                <input name="username" type="text" class="form-control" id="field1">
+            </div>
+            <div class="form-group">
+                <label for="field2">Contraseña</label>
+                <input name="password" type="password" class="form-control" id="field2">
+            </div>
+
+            <button type="submit" class="btn btn-dark btn-block btn-lg">Iniciar sesión</button>
+
+            {{#if errorMsg}}
+            <div id="errorMsg">{{{errorMsg}}}</div>
+            {{/if}}
+
+        </form>
+
+        <p>¿No tienes cuenta? <a href="/signup">¡Regístrate!</a></p>
+    </div>
+</div>
