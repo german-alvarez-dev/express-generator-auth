@@ -17,8 +17,9 @@ require('./configs/passport.config')(app)
 require('./configs/views.configs')(app)
 require('./configs/locals.config')(app)
 
-// Base URLS
-app.use('/', require('./routes/index.routes'))
-app.use('/', require('./routes/auth.routes'))
+
+// Routes index
+require('./routes')(app)
+
 
 module.exports = app
